@@ -1,6 +1,10 @@
-// 创建一个元素
-const element = <h1>Hello, world</h1>;
+class Hello extends React.Component {
+  render() {
+    return <div>Hello {this.props.toWhat}</div>;
+  }
+}
 
-// 定位容器 显示
-const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(element, domContainer);
+ReactDOM.render(
+  <Hello toWhat="World" />,
+  document.getElementById('root')
+);
